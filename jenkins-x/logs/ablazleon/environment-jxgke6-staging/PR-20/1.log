@@ -1,0 +1,42 @@
+
+Showing logs for build [32mablazleon-environment-jxgke6-st-x95c9-1-64fj9[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-djdl9[0m
+{"level":"info","ts":1593201477.9987144,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1593201478.0013502,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mablazleon-environment-jxgke6-st-x95c9-1-64fj9[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-p9zm2[0m
+{"level":"info","ts":1593201478.5027015,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1593201478.5043428,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mablazleon-environment-jxgke6-st-x95c9-1-64fj9[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mablazleon-environment-jxgke6-st-x95c9-1-64fj9[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-ablazleon-environment-jxgke6-st-x95c9-48nvt[0m
+{"level":"info","ts":1593201484.6206837,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1593201485.8325708,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/environment-**gke6-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mablazleon-environment-jxgke6-st-x95c9-1-64fj9[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mablazleon-environment-jxgke6-st-x95c9-1-64fj9[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:7fa829d96dc0eccb344be0971065a535709bc834,20:fa9d948789ba49f8f81cf8be36152f7c9e8df495
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow fa9d948789ba49f8f81cf8be36152f7c9e8df495: 7fa829d96dc0eccb344be0971065a535709bc834:
+DEBUG: ran git fetch --unshallow origin fa9d948789ba49f8f81cf8be36152f7c9e8df495: 7fa829d96dc0eccb344be0971065a535709bc834: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 7fa829d96dc0eccb344be0971065a535709bc834
+DEBUG: ran git reset --hard 7fa829d96dc0eccb344be0971065a535709bc834 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git merge fa9d948789ba49f8f81cf8be36152f7c9e8df495
+DEBUG: ran git merge fa9d948789ba49f8f81cf8be36152f7c9e8df495 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 7fa829d96dc0eccb344be0971065a535709bc834..HEAD
+Merged SHA fa9d948789ba49f8f81cf8be36152f7c9e8df495 with commit message 'chore: Promote **py to version 0.0.29' into base branch master
+
+Showing logs for build [32mablazleon-environment-jxgke6-st-x95c9-1-64fj9[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
